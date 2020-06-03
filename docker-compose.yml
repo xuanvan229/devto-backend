@@ -1,0 +1,17 @@
+version: '3'
+volumes:
+    news_data:
+services:
+  mongodb_news:
+    image: mongo:latest
+    container_name: "mongodb_news"
+    restart: always
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+      - MONGO_INITDB_ROOT_USERNAME=news
+      - MONGO_INITDB_ROOT_PASSWORD=32bf9db48d5194b3711bdbb5457ffc30
+    ports:
+      - 27019:27017
+    volumes:
+      - news_data:/data/db
