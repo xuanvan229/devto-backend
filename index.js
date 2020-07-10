@@ -159,6 +159,12 @@ app.get("/get-path", async (req, res) => {
         id: "how-are-you-dealing-with-quarantine-57ad",
       },
     },
+    {
+      params: {
+        alias: "angelcodes",
+        id: "react-app-with-tailwind-css-emotion-twin-macro-3dpe",
+      },
+    },
   ];
   res.json(200, result);
 });
